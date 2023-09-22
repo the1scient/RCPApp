@@ -49,6 +49,7 @@ struct ContentView: View {
                                 
                             }.padding()
                         }
+                        
                         //Text(musica.image)
                         //                  AsyncImage(url: URL(string: musica.image))
                         
@@ -58,8 +59,10 @@ struct ContentView: View {
                 }.padding(.trailing)
                 Spacer()
                 
+                
             }
-            .font(.system(size: 30, weight: .bold, design: .rounded))
+            .padding()
+            
             .tabItem {
                 Image(systemName: "house.fill")
                 Text("Home")
@@ -84,7 +87,7 @@ struct ContentView: View {
                 }
         }
         
-        .padding()
+            .padding()
     }
 }
 
