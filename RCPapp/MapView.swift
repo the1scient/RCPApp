@@ -4,7 +4,7 @@ import CoreLocation
 
 struct MapView: View {
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), // Coordenadas iniciais (San Francisco)
+        center: CLLocationCoordinate2D(latitude: -23.553644, longitude: -46.635035), // Coordenadas iniciais (San Francisco)
         span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1) // Zoom inicial
     )
     @State private var hospitals: [Hospital] = []
@@ -20,7 +20,7 @@ struct MapView: View {
             }
             .onAppear {
                 //            requestLocation()
-                fetchHospitals()
+              //  fetchHospitals()
             }
             
             Button(action: {
@@ -49,12 +49,12 @@ struct MapView: View {
 
 
 
-    func fetchHospitals() {
+ //   func fetchHospitals() {
         // Aqui você deve implementar a lógica para buscar dados de hospitais próximos à localização atual do usuário.
         // Por exemplo, você pode usar uma API de busca de hospitais por geolocalização.
         // Após obter os dados, preencha o array 'hospitals' com os dados dos hospitais.
         // Certifique-se de preencher 'hospitals' na thread principal usando 'DispatchQueue.main.async'.
-    }
+   // }
 
 
 struct MapView_Previews: PreviewProvider {
