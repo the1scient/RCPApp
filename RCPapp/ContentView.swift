@@ -39,24 +39,28 @@ struct ContentView: View {
                     
                 }
                 Spacer()
+                    .frame(height: 50)
                 
-                VStack{
-                    ForEach(musicList, id: \.name){ musica in
-                        VStack{
-                            HStack{
-                                Rectangle().frame(width: 100.0, height: 100.0)
-                                Spacer()
-                                
-                            }.padding()
+                ScrollView {
+                    VStack{
+                        ForEach(musicList, id: \.name){ musica in
+                            VStack{
+                                HStack{
+                                    Rectangle().frame(width: 100.0, height: 100.0)
+                                    Spacer()
+                                    
+                                }.padding()
+                            }
+                            //Text(musica.image)
+                            //                  AsyncImage(url: URL(string: musica.image))
+                            
                         }
-                        //Text(musica.image)
-                        //                  AsyncImage(url: URL(string: musica.image))
                         
-                    }
-                    
-                    
-                }.padding(.trailing)
-                Spacer()
+                        
+                    }.padding(.trailing)
+                    Spacer()
+                }
+             
                 
             }
             .font(.system(size: 30, weight: .bold, design: .rounded))
