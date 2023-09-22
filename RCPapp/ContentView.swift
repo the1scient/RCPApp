@@ -18,8 +18,9 @@ struct ContentView: View {
     
     
     var musicList = [
-        Music(name: "Song 1", artist: "Artist 1", image: "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13"),
-        Music(name: "Song 2", artist: "Artist 2", image: "image2"),
+        Music(name: "Bones", artist: "Imagine Dragons", image: "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13"),
+        Music(name: "do wanna taste it", artist: "Wig Wam", image: "https://static.qobuz.com/images/covers/kb/kc/t8o6zveb8kckb_600.jpg"),
+        Music(name: "annihilation", artist: " Lil Wayne, Metro Boomin, Offset, Swae Lee 2", image: "https://i.scdn.co/image/ab67616d0000b2736ed9aef791159496b286179f"),
         // Adicione mais músicas conforme necessário
     ]
     
@@ -45,24 +46,34 @@ struct ContentView: View {
                     VStack{
                         ForEach(musicList, id: \.name){ musica in
                             VStack{
+                                Spacer()
                                 HStack{
-
+                                    
                                     AsyncImage(url: URL(string: musica.image)){ image in
                                         image
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            
+                                        
                                     } placeholder: {
                                         Color.gray
                                     }
-                                    .frame(width: 250, height: 250)
+                                    .frame(width: 120, height: 120)
+                                    .clipShape(Circle())
+                                    
+                                    VStack (alignment: .leading){
+                                        Text(musica.name).font(.title2).fontWeight(.semibold)
+                                        Text(musica.artist).font(.subheadline)
+                                    }
+                                  
+                                    
+                                    
+                           //         Label(musica.artist)
                                     
                                     Spacer()
                                     
-                                }.padding()
+                                }
                             }
-                            //Text(musica.image)
-                            //                  AsyncImage(url: URL(string: musica.image))
+                          
                             
                         }
                         
@@ -70,13 +81,13 @@ struct ContentView: View {
                     }.padding(.trailing)
                     Spacer()
                 }
-             
+                
                 
             }
             .font(.system(size: 30, weight: .bold, design: .rounded))
             .tabItem {
                 Image(systemName: "house.fill")
-                Text("Home")
+                Text("Homeeeee")
             }
             Text("infos")
                 .font(.title)
@@ -95,10 +106,11 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Perfil")
+                    
                 }
         }
         
-        .padding()
+        //.padding()
     }
 }
 
