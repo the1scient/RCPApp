@@ -8,6 +8,7 @@ struct Map: View {
         span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1) // Zoom inicial
     )
     @State private var hospitals: [Hospital] = []
+
     @State private var userLocation: CLLocationCoordinate2D?
     let locationManager = CLLocationManager()
     
