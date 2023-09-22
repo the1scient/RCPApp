@@ -39,30 +39,41 @@ struct ContentView: View {
                     
                 }
                 Spacer()
+                    .frame(height: 50)
                 
-                VStack{
-                    ForEach(musicList, id: \.name){ musica in
-                        VStack{
-                            HStack{
-                                Rectangle().frame(width: 100.0, height: 100.0)
-                                Spacer()
-                                
-                            }.padding()
+                ScrollView {
+                    VStack{
+                        ForEach(musicList, id: \.name){ musica in
+                            VStack{
+                                HStack{
+
+                                    AsyncImage(url: URL(string: musica.image)){ image in
+                                        image
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            
+                                    } placeholder: {
+                                        Color.gray
+                                    }
+                                    .frame(width: 250, height: 250)
+                                    
+                                    Spacer()
+                                    
+                                }.padding()
+                            }
+                            //Text(musica.image)
+                            //                  AsyncImage(url: URL(string: musica.image))
+                            
                         }
                         
-                        //Text(musica.image)
-                        //                  AsyncImage(url: URL(string: musica.image))
                         
-                    }
-                    
-                    
-                }.padding(.trailing)
-                Spacer()
-                
+                    }.padding(.trailing)
+                    Spacer()
+                }
+             
                 
             }
-            .padding()
-            
+            .font(.system(size: 30, weight: .bold, design: .rounded))
             .tabItem {
                 Image(systemName: "house.fill")
                 Text("Home")
@@ -71,7 +82,7 @@ struct ContentView: View {
                 .font(.title)
                 .tabItem {
                     Image(systemName: "heart.fill")
-                    Text("infos")
+                    Text("Info")
                 }
             Text("Mapa")
                 .font(.system(size: 30, weight: .bold, design: .rounded))
@@ -83,11 +94,11 @@ struct ContentView: View {
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
                     Image(systemName: "person.crop.circle")
-                    Text("perfil")
+                    Text("Perfil")
                 }
         }
         
-            .padding()
+        .padding()
     }
 }
 
@@ -96,4 +107,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
