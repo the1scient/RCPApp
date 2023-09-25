@@ -194,7 +194,7 @@ struct ContentView: View {
                     Image(systemName: "map.circle")
                     Text("Mapa")
                 }
-            Text("perfil")
+            PerfilView()
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
                     Image(systemName: "person.crop.circle")
