@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Music{
+struct Music {
     var name: String
     var artist: String
     var image: String
@@ -15,13 +15,24 @@ struct Music{
 
 struct ContentView: View {
     
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor(red: 200, green: 200, blue: 200, alpha: 0.5)
+    }
     
     
     var musicList = [
-        Music(name: "Song 1", artist: "Artist 1", image: "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13"),
-        Music(name: "Song 2", artist: "Artist 2", image: "image2"),
+        Music(name: "Bones", artist: "Imagine Dragons", image: "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13"),
+        Music(name: "do wanna taste it", artist: "Wig Wam", image: "https://static.qobuz.com/images/covers/kb/kc/t8o6zveb8kckb_600.jpg"),
+        Music(name: "annihilation", artist: " Lil Wayne, Metro Boomin, Offset, Swae Lee 2", image: "https://i.scdn.co/image/ab67616d0000b2736ed9aef791159496b286179f"),
         // Adicione mais músicas conforme necessário
     ]
+    
+    @State var isPlaying : Bool = false;
+    @State var isRotating : Bool = false;
+    @State var rotation = 0.0
+    
+    
+    @State var currentPlaying : Music =  Music(name: "Bones", artist: "Imagine Dragons", image: "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13")
     
     var body: some View {
         
@@ -35,34 +46,131 @@ struct ContentView: View {
                     Image(systemName: "heart.fill").foregroundColor(.red)
                         .font(.system(size: 30))
                     
-                    Circle().padding(.top).frame(width: 200.0, height: 200.0)
+                    if isPlaying == true {
+                        AsyncImage(url: URL(string: currentPlaying.image)){ image in
+                            image
+                            
+                                .resizable()
+                                .clipShape(Circle())
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 200, height: 200)
+                                .rotationEffect(.degrees(rotation))
+                                .onAppear {
+                                    
+                                    withAnimation(.linear(duration: 10)
+                                        .repeatForever(autoreverses: false)) {
+                                            rotation = 360.0
+                                           
+                                        }
+                                }
+                                .onTapGesture {
+                                    isPlaying = false
+                                }
+                            
+                        }
+                        
+                        
+                        placeholder: {
+                            
+                        }
+                        
+                        
+                    }
+                    
+                    else {
+                      
+                        
+                        AsyncImage(url: URL(string: currentPlaying.image)){ image in
+                            image
+                            
+                                .resizable()
+                                .clipShape(Circle())
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 200, height: 200)
+                                .blur(radius: 2)
+                               
+                               
+                            
+                                .onTapGesture {
+                                    isPlaying = true
+                                }
+                            
+                        }
+                        
+                        
+                        placeholder: {
+                            
+                        }
+                        
+                        
+                        
+                        
+                    }
+                    
+                 
+                 
+                    
+//                .onTapGesture {
+//                  isPlaying = false
+//
+//                }
+                  
+                    
+                    Text("\(currentPlaying.name)")
+                        .fontWeight(.semibold)
+                    
+                    
+                    
+                    Text("\(currentPlaying.artist)")
+                        .fontWeight(.regular)
+                    
+                    
+                    
                     
                 }
                 Spacer()
-                    .frame(height: 50)
+                    .frame(height: 10)
                 
                 ScrollView {
                     VStack{
                         ForEach(musicList, id: \.name){ musica in
                             VStack{
+                                Spacer()
                                 HStack{
-
+                                    
                                     AsyncImage(url: URL(string: musica.image)){ image in
                                         image
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            
+                                        
                                     } placeholder: {
                                         Color.gray
                                     }
-                                    .frame(width: 250, height: 250)
+                                    .frame(width: 120, height: 120)
+                                    .clipShape(Circle())
+                                    
+                                    .onTapGesture {
+                                        currentPlaying = musica
+                                        isPlaying = true
+                                        isRotating = true
+                                    }
+                                    
+                                    
+                                    
+                                    VStack (alignment: .leading){
+                                        Text(musica.name).font(.title2).fontWeight(.semibold)
+                                        Text(musica.artist).font(.subheadline)
+                                    }
+                                    
+                                    
+                                    
+                                    //         Label(musica.artist)
                                     
                                     Spacer()
                                     
-                                }.padding()
+                                }
                             }
-                            //Text(musica.image)
-                            //                  AsyncImage(url: URL(string: musica.image))
+                            
                             
                         }
                         
@@ -70,7 +178,7 @@ struct ContentView: View {
                     }.padding(.trailing)
                     Spacer()
                 }
-             
+                
                 
             }
             .font(.system(size: 30, weight: .bold, design: .rounded))
@@ -84,21 +192,22 @@ struct ContentView: View {
                     Image(systemName: "heart.fill")
                     Text("Info")
                 }
-            Text("Mapa")
+            MapView()
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
+                    
                     Image(systemName: "map.circle")
                     Text("Mapa")
                 }
-            Text("perfil")
+            PerfilView()
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Perfil")
+                    
                 }
-        }
-        
-        .padding()
+        } .accentColor(.red.opacity(0.75))
+        //.padding()
     }
 }
 

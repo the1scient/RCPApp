@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F9C69BB02ABDC7CA00A97992 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C69BAF2ABDC7CA00A97992 /* MapView.swift */; };
+		FAFBF1632AC1BF0B009412CE /* PerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBF1622AC1BF0B009412CE /* PerfilView.swift */; };
 		FC8FEA2A2AB9BAAD00690664 /* RCPappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8FEA292AB9BAAD00690664 /* RCPappApp.swift */; };
 		FC8FEA2C2AB9BAAD00690664 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8FEA2B2AB9BAAD00690664 /* ContentView.swift */; };
 		FC8FEA2E2AB9BAAE00690664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8FEA2D2AB9BAAE00690664 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		F9C69BAF2ABDC7CA00A97992 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		FAFBF1622AC1BF0B009412CE /* PerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilView.swift; sourceTree = "<group>"; };
 		FC8FEA262AB9BAAD00690664 /* RCPapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCPapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8FEA292AB9BAAD00690664 /* RCPappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCPappApp.swift; sourceTree = "<group>"; };
 		FC8FEA2B2AB9BAAD00690664 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				FC8FEA2B2AB9BAAD00690664 /* ContentView.swift */,
 				FC8FEA2D2AB9BAAE00690664 /* Assets.xcassets */,
 				FC8FEA2F2AB9BAAE00690664 /* Preview Content */,
+				FAFBF1622AC1BF0B009412CE /* PerfilView.swift */,
 			);
 			path = RCPapp;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAFBF1632AC1BF0B009412CE /* PerfilView.swift in Sources */,
 				FC8FEA2C2AB9BAAD00690664 /* ContentView.swift in Sources */,
 				F9C69BB02ABDC7CA00A97992 /* MapView.swift in Sources */,
 				FC8FEA2A2AB9BAAD00690664 /* RCPappApp.swift in Sources */,
