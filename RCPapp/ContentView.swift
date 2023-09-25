@@ -188,9 +188,10 @@ struct ContentView: View {
                     Image(systemName: "heart.fill")
                     Text("Info")
                 }
-            Text("Mapa")
+            MapView()
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
+                    
                     Image(systemName: "map.circle")
                     Text("Mapa")
                 }
