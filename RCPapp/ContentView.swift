@@ -24,7 +24,7 @@ struct ContentView: View {
     ]
     
     @State var isPlaying : Bool = false;
-    @State private var isRotating = 0.0
+    @State var isRotating = 0.0
 
     
     @State var currentPlaying : Music =  Music(name: "Bones", artist: "Imagine Dragons", image: "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13")
@@ -49,20 +49,32 @@ struct ContentView: View {
                             .clipShape(Circle())
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 200, height: 200)
+                            .blur(radius: isPlaying ? 0 : 2)
                         
                     }
+                    
+                    
                 placeholder: {
                     
                 }
+                .onTapGesture {
+                    isPlaying = false;
+                }
                     
-                     
+                Text("\(currentPlaying.name)")
+                        .fontWeight(.semibold)
+                    
+                
+                    
+                Text("\(currentPlaying.artist)")
+                        .fontWeight(.regular)
                     
                 
                     
                      
                 }
                 Spacer()
-                    .frame(height: 50)
+                    .frame(height: 10)
                 
                 ScrollView {
                     VStack{
@@ -84,6 +96,7 @@ struct ContentView: View {
                                     
                                     .onTapGesture {
                                         currentPlaying = musica
+                                        isPlaying = true
                                     }
                                  
                                   
