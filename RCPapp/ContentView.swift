@@ -16,7 +16,7 @@ struct Music {
 struct ContentView: View {
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor.lightGray
+        UITabBar.appearance().backgroundColor = UIColor(red: 200, green: 200, blue: 200, alpha: 0.5)
     }
     
     
@@ -206,7 +206,7 @@ struct ContentView: View {
                     Text("Perfil")
                     
                 }
-        } .accentColor(.blue)
+        } .accentColor(.red.opacity(0.75))
         //.padding()
     }
 }
