@@ -15,6 +15,10 @@ struct Music {
 
 struct ContentView: View {
     
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.lightGray
+    }
+    
     
     var musicList = [
         Music(name: "Bones", artist: "Imagine Dragons", image: "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13"),
@@ -202,8 +206,7 @@ struct ContentView: View {
                     Text("Perfil")
                     
                 }
-        }
-        
+        } .accentColor(.blue)
         //.padding()
     }
 }
