@@ -15,7 +15,7 @@ struct Music {
 
 struct ContentView: View {
     
-
+    
     var musicList = [
         Music(name: "Bones", artist: "Imagine Dragons", image: "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13"),
         Music(name: "do wanna taste it", artist: "Wig Wam", image: "https://static.qobuz.com/images/covers/kb/kc/t8o6zveb8kckb_600.jpg"),
@@ -24,8 +24,9 @@ struct ContentView: View {
     ]
     
     @State var isPlaying : Bool = false;
-    @State var isRotating = 0.0
-
+    @State var isRotating : Bool = false;
+    @State var rotation = 0.0
+    
     
     @State var currentPlaying : Music =  Music(name: "Bones", artist: "Imagine Dragons", image: "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13")
     
@@ -41,37 +42,87 @@ struct ContentView: View {
                     Image(systemName: "heart.fill").foregroundColor(.red)
                         .font(.system(size: 30))
                     
-                  
-                    AsyncImage(url: URL(string: currentPlaying.image)){ image in
-                        image
-                           
-                            .resizable()
-                            .clipShape(Circle())
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 200, height: 200)
-                            .blur(radius: isPlaying ? 0 : 2)
+                    if isPlaying == true {
+                        AsyncImage(url: URL(string: currentPlaying.image)){ image in
+                            image
+                            
+                                .resizable()
+                                .clipShape(Circle())
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 200, height: 200)
+                                .rotationEffect(.degrees(rotation))
+                                .onAppear {
+                                    
+                                    withAnimation(.linear(duration: 10)
+                                        .repeatForever(autoreverses: false)) {
+                                            rotation = 360.0
+                                           
+                                        }
+                                }
+                                .onTapGesture {
+                                    isPlaying = false
+                                }
+                            
+                        }
+                        
+                        
+                        placeholder: {
+                            
+                        }
+                        
                         
                     }
                     
+                    else {
+                      
+                        
+                        AsyncImage(url: URL(string: currentPlaying.image)){ image in
+                            image
+                            
+                                .resizable()
+                                .clipShape(Circle())
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 200, height: 200)
+                                .blur(radius: 2)
+                               
+                               
+                            
+                                .onTapGesture {
+                                    isPlaying = true
+                                }
+                            
+                        }
+                        
+                        
+                        placeholder: {
+                            
+                        }
+                        
+                        
+                        
+                        
+                    }
                     
-                placeholder: {
+                 
+                 
                     
-                }
-                .onTapGesture {
-                    isPlaying = false;
-                }
+//                .onTapGesture {
+//                  isPlaying = false
+//
+//                }
+                  
                     
-                Text("\(currentPlaying.name)")
+                    Text("\(currentPlaying.name)")
                         .fontWeight(.semibold)
                     
-                
                     
-                Text("\(currentPlaying.artist)")
+                    
+                    Text("\(currentPlaying.artist)")
                         .fontWeight(.regular)
                     
-                
                     
-                     
+                    
+                    
                 }
                 Spacer()
                     .frame(height: 10)
@@ -97,24 +148,25 @@ struct ContentView: View {
                                     .onTapGesture {
                                         currentPlaying = musica
                                         isPlaying = true
+                                        isRotating = true
                                     }
-                                 
-                                  
+                                    
+                                    
                                     
                                     VStack (alignment: .leading){
                                         Text(musica.name).font(.title2).fontWeight(.semibold)
                                         Text(musica.artist).font(.subheadline)
                                     }
-                                  
                                     
                                     
-                           //         Label(musica.artist)
+                                    
+                                    //         Label(musica.artist)
                                     
                                     Spacer()
                                     
                                 }
                             }
-                          
+                            
                             
                         }
                         
