@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C3FDD7F62AC3087D002A4354 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FDD7F52AC3087D002A4354 /* Login.swift */; };
-		F3B413502AC309A000C6DC1D /* hahaha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3B4134F2AC309A000C6DC1D /* hahaha.mp3 */; };
 		F9C69BB02ABDC7CA00A97992 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C69BAF2ABDC7CA00A97992 /* MapView.swift */; };
-		FAFBF1632AC1BF0B009412CE /* PerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBF1622AC1BF0B009412CE /* PerfilView.swift */; };
+		FA38B3F52AC30FEA0098769A /* hahaha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA38B3F42AC30FEA0098769A /* hahaha.mp3 */; };
+		FA38B3F72AC3189F0098769A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38B3F62AC3189F0098769A /* LoginView.swift */; };
 		FC8FEA2A2AB9BAAD00690664 /* RCPappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8FEA292AB9BAAD00690664 /* RCPappApp.swift */; };
 		FC8FEA2C2AB9BAAD00690664 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8FEA2B2AB9BAAD00690664 /* ContentView.swift */; };
 		FC8FEA2E2AB9BAAE00690664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8FEA2D2AB9BAAE00690664 /* Assets.xcassets */; };
@@ -18,10 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C3FDD7F52AC3087D002A4354 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		F3B4134F2AC309A000C6DC1D /* hahaha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hahaha.mp3; path = "../../../../Music/Music/Media.localized/Music/Unknown Artist/Unknown Album/hahaha.mp3"; sourceTree = "<group>"; };
 		F9C69BAF2ABDC7CA00A97992 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		FAFBF1622AC1BF0B009412CE /* PerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilView.swift; sourceTree = "<group>"; };
+		FA38B3F42AC30FEA0098769A /* hahaha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hahaha.mp3; path = ../../../../../Downloads/hahaha.mp3; sourceTree = "<group>"; };
+		FA38B3F62AC3189F0098769A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FC8FEA262AB9BAAD00690664 /* RCPapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCPapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8FEA292AB9BAAD00690664 /* RCPappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCPappApp.swift; sourceTree = "<group>"; };
 		FC8FEA2B2AB9BAAD00690664 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,14 +57,13 @@
 		FC8FEA282AB9BAAD00690664 /* RCPapp */ = {
 			isa = PBXGroup;
 			children = (
-				F3B4134F2AC309A000C6DC1D /* hahaha.mp3 */,
-				C3FDD7F52AC3087D002A4354 /* Login.swift */,
-				FAFBF1622AC1BF0B009412CE /* PerfilView.swift */,
+				FA38B3F42AC30FEA0098769A /* hahaha.mp3 */,
 				FC8FEA292AB9BAAD00690664 /* RCPappApp.swift */,
 				F9C69BAF2ABDC7CA00A97992 /* MapView.swift */,
 				FC8FEA2B2AB9BAAD00690664 /* ContentView.swift */,
 				FC8FEA2D2AB9BAAE00690664 /* Assets.xcassets */,
 				FC8FEA2F2AB9BAAE00690664 /* Preview Content */,
+				FA38B3F62AC3189F0098769A /* LoginView.swift */,
 			);
 			path = RCPapp;
 			sourceTree = "<group>";
@@ -138,8 +135,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8FEA312AB9BAAE00690664 /* Preview Assets.xcassets in Resources */,
-				F3B413502AC309A000C6DC1D /* hahaha.mp3 in Resources */,
 				FC8FEA2E2AB9BAAE00690664 /* Assets.xcassets in Resources */,
+				FA38B3F52AC30FEA0098769A /* hahaha.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,10 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAFBF1632AC1BF0B009412CE /* PerfilView.swift in Sources */,
-				C3FDD7F62AC3087D002A4354 /* Login.swift in Sources */,
 				FC8FEA2C2AB9BAAD00690664 /* ContentView.swift in Sources */,
 				F9C69BB02ABDC7CA00A97992 /* MapView.swift in Sources */,
+				FA38B3F72AC3189F0098769A /* LoginView.swift in Sources */,
 				FC8FEA2A2AB9BAAD00690664 /* RCPappApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
