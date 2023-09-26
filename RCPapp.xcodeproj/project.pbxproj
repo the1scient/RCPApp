@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C3FDD7F92AC31F0C002A4354 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C3FDD7F92AC31F0C002A4354 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../HomeView.swift; sourceTree = "<group>"; };
 		F30B92BD2AC32545006ACC31 /* hahaha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hahaha.mp3; path = ../../../../Downloads/hahaha.mp3; sourceTree = "<group>"; };
 		F951FF132AC324B5007039AD /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		F9C69BAF2ABDC7CA00A97992 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -45,7 +45,6 @@
 		FC8FEA1D2AB9BAAD00690664 = {
 			isa = PBXGroup;
 			children = (
-				C3FDD7F92AC31F0C002A4354 /* HomeView.swift */,
 				FC8FEA282AB9BAAD00690664 /* RCPapp */,
 				FC8FEA272AB9BAAD00690664 /* Products */,
 			);
@@ -62,6 +61,7 @@
 		FC8FEA282AB9BAAD00690664 /* RCPapp */ = {
 			isa = PBXGroup;
 			children = (
+				C3FDD7F92AC31F0C002A4354 /* HomeView.swift */,
 				F30B92BD2AC32545006ACC31 /* hahaha.mp3 */,
 				FC8FEA292AB9BAAD00690664 /* RCPappApp.swift */,
 				F9C69BAF2ABDC7CA00A97992 /* MapView.swift */,
