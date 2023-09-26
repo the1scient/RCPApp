@@ -54,7 +54,7 @@ struct ContentView: View {
         
         TabView {
             
-            homeView()
+            HomeView()
                 .font(.system(size: 20, design: .rounded))
                 .tabItem {
                     Image(systemName: "house.fill")
