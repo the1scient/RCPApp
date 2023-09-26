@@ -65,7 +65,7 @@ struct ContentView: View {
                 }
             
             
-            Text("infos")
+            InfoView()
                 .font(.title)
                 .tabItem {
                     Image(systemName: "heart.fill")
