@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import Foundation
+import AVFoundation
 
 struct Music {
     var name: String
     var artist: String
     var image: String
 }
+
+
+
 
 struct ContentView: View {
     

@@ -55,12 +55,12 @@
 		FC8FEA282AB9BAAD00690664 /* RCPapp */ = {
 			isa = PBXGroup;
 			children = (
+				FAFBF1622AC1BF0B009412CE /* PerfilView.swift */,
 				FC8FEA292AB9BAAD00690664 /* RCPappApp.swift */,
 				F9C69BAF2ABDC7CA00A97992 /* MapView.swift */,
 				FC8FEA2B2AB9BAAD00690664 /* ContentView.swift */,
 				FC8FEA2D2AB9BAAE00690664 /* Assets.xcassets */,
 				FC8FEA2F2AB9BAAE00690664 /* Preview Content */,
-				FAFBF1622AC1BF0B009412CE /* PerfilView.swift */,
 			);
 			path = RCPapp;
 			sourceTree = "<group>";

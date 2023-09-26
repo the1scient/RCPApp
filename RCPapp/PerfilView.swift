@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct PerfilView: View {
+        
+    @AppStorage("NOME_PESSOA") var nomePessoa : String = ""
+    @AppStorage("PROFISSAO_PESSOA") var profissaoPessoa : String = ""
     
-    @State var nomePessoa: String = ""
-    @State var profissaoPessoa: String = ""
     
     var body: some View {
         VStack{
