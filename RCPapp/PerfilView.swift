@@ -22,11 +22,15 @@ struct PerfilView: View {
             Spacer()
             VStack{
                 Image(systemName: "person.fill")
-                    .font(.system(size: 200))
+                    .font(.system(size: 130))
                 Text("Bem vindo(a) \(nomePessoa)")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
+                Divider()
+                    .frame(width: 300, height: 2)
+                    .background(Color.black)
+                    .padding(.horizontal)
+                    .padding(.bottom, 60)
             }
-            Spacer()
             VStack{
                 HStack{
                     Text("Nome: ")
@@ -38,7 +42,7 @@ struct PerfilView: View {
                 }
             }
             .font(.system(size: 20, weight: .bold))
-            .padding(.leading)
+            .padding([.leading, .top])
             Spacer()
             
         }
