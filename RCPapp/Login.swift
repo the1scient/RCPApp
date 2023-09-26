@@ -60,7 +60,7 @@ struct Login: View {
                         .padding(.bottom, 50)
                     
                     if nome != "" && Profissao != ""{
-                        NavigationLink(destination: ContentView(), label: {
+                        NavigationLink(destination: ContentView().navigationBarBackButtonHidden(false), label: {
                             Text("Salvar Perfil")
                         })
                         .foregroundColor(.black)
