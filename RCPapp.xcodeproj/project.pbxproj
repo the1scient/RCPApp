@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3FDD7F62AC3087D002A4354 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FDD7F52AC3087D002A4354 /* Login.swift */; };
 		F9C69BB02ABDC7CA00A97992 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C69BAF2ABDC7CA00A97992 /* MapView.swift */; };
 		FAFBF1632AC1BF0B009412CE /* PerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBF1622AC1BF0B009412CE /* PerfilView.swift */; };
 		FC8FEA2A2AB9BAAD00690664 /* RCPappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8FEA292AB9BAAD00690664 /* RCPappApp.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3FDD7F52AC3087D002A4354 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		F9C69BAF2ABDC7CA00A97992 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FAFBF1622AC1BF0B009412CE /* PerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilView.swift; sourceTree = "<group>"; };
 		FC8FEA262AB9BAAD00690664 /* RCPapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCPapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +57,7 @@
 		FC8FEA282AB9BAAD00690664 /* RCPapp */ = {
 			isa = PBXGroup;
 			children = (
+				C3FDD7F52AC3087D002A4354 /* Login.swift */,
 				FAFBF1622AC1BF0B009412CE /* PerfilView.swift */,
 				FC8FEA292AB9BAAD00690664 /* RCPappApp.swift */,
 				F9C69BAF2ABDC7CA00A97992 /* MapView.swift */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAFBF1632AC1BF0B009412CE /* PerfilView.swift in Sources */,
+				C3FDD7F62AC3087D002A4354 /* Login.swift in Sources */,
 				FC8FEA2C2AB9BAAD00690664 /* ContentView.swift in Sources */,
 				F9C69BB02ABDC7CA00A97992 /* MapView.swift in Sources */,
 				FC8FEA2A2AB9BAAD00690664 /* RCPappApp.swift in Sources */,
