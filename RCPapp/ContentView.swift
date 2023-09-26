@@ -19,16 +19,10 @@ var player : AVAudioPlayer!
 
 func playSound(key: String) {
     
-   // let url = Bundle.main.url(forResource: "test", withExtension: "mp3")
     
     let path = Bundle.main.path(forResource: "hahaha", ofType:"mp3")!
     let url = URL(fileURLWithPath: path)
     
-//    guard url != nil else {
-//
-//        return
-//
-//    }
     
     do {
         
@@ -91,11 +85,7 @@ struct ContentView: View {
                                 .rotationEffect(.degrees(rotation))
                                 .onAppear {
                                     
-                                    withAnimation(.linear(duration: 10)
-                                        .repeatForever(autoreverses: false)) {
-                                            rotation = 360.0
-                                           
-                                        }
+                                   
                                 }
                                 .onTapGesture {
                                     isPlaying = false
@@ -189,6 +179,7 @@ struct ContentView: View {
                                         currentPlaying = musica
                                         isPlaying = true
                                         isRotating = true
+                                        playSound(key: "test")
                                     }
                                     
                                     
