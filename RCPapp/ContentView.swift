@@ -15,7 +15,36 @@ struct Music {
     var image: String
 }
 
+var player : AVAudioPlayer!
 
+func playSound(key: String) {
+    
+   // let url = Bundle.main.url(forResource: "test", withExtension: "mp3")
+    
+    let path = Bundle.main.path(forResource: "hahaha", ofType:"mp3")!
+    let url = URL(fileURLWithPath: path)
+    
+//    guard url != nil else {
+//
+//        return
+//
+//    }
+    
+    do {
+        
+        player = try AVAudioPlayer(contentsOf: url)
+        player?.play()
+    }
+    
+    catch {
+        
+        print("Error playing: \(error)")
+        
+    }
+    
+    
+    
+}
 
 
 struct ContentView: View {
@@ -70,6 +99,7 @@ struct ContentView: View {
                                 }
                                 .onTapGesture {
                                     isPlaying = false
+                                    player.pause()
                                 }
                             
                         }
@@ -97,7 +127,10 @@ struct ContentView: View {
                                
                             
                                 .onTapGesture {
+                                    
                                     isPlaying = true
+                                    playSound(key: "test")
+                                    
                                 }
                             
                         }
@@ -106,8 +139,6 @@ struct ContentView: View {
                         placeholder: {
                             
                         }
-                        
-                        
                         
                         
                     }
