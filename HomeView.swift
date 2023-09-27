@@ -23,140 +23,108 @@ struct HomeView: View {
     @State var currentPlaying : Music =  Music(name: "Bones", artist: "Imagine Dragons", image: "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13")
     var body: some View {
         VStack{
-            VStack{
-                Text("RCPApp").font(.title)
-                Image(systemName: "heart.fill").foregroundColor(.red)
-                    .font(.system(size: 30))
+            ZStack{
+                Circle()
+                    .scale(1.3)
+                    .foregroundColor(.red.opacity(0.95))
+                    .frame(width: 800, height: 450)
+                    .padding(.bottom, 900)
+                Text("RCP APP")
+                    .font(.largeTitle)
+                    .bold()
+                    .padding(.bottom, 510)
+                    .foregroundColor(.white)
                 
-                if isPlaying == true {
-                    AsyncImage(url: URL(string: currentPlaying.image)){ image in
-                        image
-                        
-                            .resizable()
-                            .clipShape(Circle())
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 200, height: 200)
-                            .rotationEffect(.degrees(rotation))
-                            .onAppear {
-                                
-                               
-                            }
-                            .onTapGesture {
-                                isPlaying = false
-                                player.pause()
-                            }
-                        
-                    }
-                    
-                    
-                    placeholder: {
-                        
-                    }
-                    
-                    
-                }
-                
-                else {
-                  
-                    
-                    AsyncImage(url: URL(string: currentPlaying.image)){ image in
-                        image
-                        
-                            .resizable()
-                            .clipShape(Circle())
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 200, height: 200)
-                            .blur(radius: 2)
-                           
-                           
-                        
-                            .onTapGesture {
-                                
-                                isPlaying = true
-                                playSound(key: "test")
-                                
-                            }
-                        
-                    }
-                    
-                    
-                    placeholder: {
-                        
-                    }
-                    
-                    
-                }
-                
-
-              
-                
-                Text("\(currentPlaying.name)")
-                    .fontWeight(.semibold)
-                
-                
-                
-                Text("\(currentPlaying.artist)")
-                    .fontWeight(.regular)
-                
-                
-                
-                
-            }
-            Spacer()
-                .frame(height: 10)
-            
-            ScrollView {
                 VStack{
-                    ForEach(musicList, id: \.name){ musica in
-                        VStack{
-                            Spacer()
-                            HStack{
-                                
-                                AsyncImage(url: URL(string: musica.image)){ image in
-                                    image
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                    
-                                } placeholder: {
-                                    Color.gray
-                                }
-                                .frame(width: 120, height: 120)
+                    if isPlaying == true {
+                        AsyncImage(url: URL(string: currentPlaying.image)){ image in
+                            image
+                                .resizable()
                                 .clipShape(Circle())
-                                
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 200, height: 200)
+                                .rotationEffect(.degrees(rotation))
+                                .padding(.top, 530)
+                                .onAppear {
+                                }
                                 .onTapGesture {
-                                    currentPlaying = musica
-                                    isPlaying = true
-                                    isRotating = true
-                                    playSound(key: "test")
+                                    isPlaying = false
+                                    player.pause()
                                 }
-                                
-                                
-                                
-                                VStack (alignment: .leading){
-                                    Text(musica.name).font(.title2).fontWeight(.semibold)
-                                    Text(musica.artist).font(.subheadline)
-                                }
-                                
-                                
-                                
-                                //         Label(musica.artist)
-                                
-                                Spacer()
-                                
-                            }
                         }
+                    placeholder: {
                         
+                    }
                         
+                    }else {
+                        AsyncImage(url: URL(string: currentPlaying.image)){ image in
+                            image
+                                .resizable()
+                                .clipShape(Circle())
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 200, height: 200)
+                                .blur(radius: 2)
+                                .padding(.top, 530)
+                            
+                                .onTapGesture {
+                                    isPlaying = true
+                                    playSound(key: "test")
+                                    
+                                }
+                        }
+                    placeholder: {
+                        
+                    }
+                        
+                        Text("\(currentPlaying.name)")
+                            .fontWeight(.semibold)
+                        
+                        Text("\(currentPlaying.artist)")
+                            .fontWeight(.regular)
+                        
+                    }
+                    //                    Spacer()
+                    //                        .frame(height: 10)
+                    ScrollView {
+                        VStack{
+                            ForEach(musicList, id: \.name){ musica in
+                                VStack{
+                                    HStack{
+                                        AsyncImage(url: URL(string: musica.image)){ image in
+                                            image
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                            
+                                        } placeholder: {
+                                            Color.gray
+                                        }
+                                        .frame(width: 120, alignment: .leading).clipShape(Circle())
+                                        .onTapGesture {
+                                            currentPlaying = musica
+                                            isPlaying = true
+                                            isRotating = true
+                                            playSound(key: "test")
+                                        }
+                                        VStack{
+                                            Text(musica.name).font(.title2).fontWeight(.semibold)
+                                                .frame(width: 200, alignment: .leading)
+                                            Text(musica.artist).font(.subheadline)
+                                                .frame(width: 200, alignment: .leading)
+                                        }
+                                    }
+                                }
+                            }
+                        }.padding(.trailing)
+                        Spacer()
                     }
                     
                     
-                }.padding(.trailing)
-                Spacer()
+                    
+                }
             }
             
-            
-        }.background(LinearGradient(gradient: Gradient(colors: [Color(.white), Color(.red)]), startPoint: .top, endPoint: .bottom)
-)    }
+        }
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {

@@ -90,22 +90,12 @@ struct LoginView: View {
                         Text("Profissão: \(Profissao)")
                             .padding(.top, 5)
                             .padding(.bottom, 200)
-                        if nome != "" && Profissao != ""{
                             Button("Editar Perfil"){
                                 logado.toggle()
                             }
                             .foregroundColor(.black)
                             .frame(width: 300, height: 50)
                             .background(Color.red.opacity(0.95))
-                            .cornerRadius(10)
-                            .border(.blue.opacity(0.2))
-                        } else {
-                            Button("Editar Perfil"){
-                                
-                            }
-                            .foregroundColor(.black)
-                            .frame(width: 300, height: 50)
-                            .background(Color.gray.opacity(0.65))
                             .cornerRadius(10)
                             .border(.blue.opacity(0.2))
                         }
@@ -124,7 +114,6 @@ struct LoginView: View {
             .ignoresSafeArea()
         }
     }
-}
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
