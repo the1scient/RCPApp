@@ -64,7 +64,8 @@ struct LoginView: View {
                             Button("Salvar Perfil"){
                                 logado.toggle()
                             }
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
+                            .bold()
                             .frame(width: 300, height: 50)
                             .background(Color.red.opacity(0.95))
                             .cornerRadius(10)
@@ -74,7 +75,8 @@ struct LoginView: View {
                             Button("Salvar Perfil"){
                                 
                             }
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
+                            .bold()
                             .frame(width: 300, height: 50)
                             .background(Color.gray.opacity(0.65))
                             .cornerRadius(10)
@@ -93,7 +95,8 @@ struct LoginView: View {
                             Button("Editar Perfil"){
                                 logado.toggle()
                             }
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
+                            .bold()
                             .frame(width: 300, height: 50)
                             .background(Color.red.opacity(0.95))
                             .cornerRadius(10)
