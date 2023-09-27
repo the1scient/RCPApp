@@ -23,7 +23,7 @@ struct LoginView: View {
                 Color.white
                 
                 Circle()
-                    .scale(1.3)
+                    .scale(1.2)
                     .foregroundColor(.red.opacity(0.95))
                     .frame(width: 800, height: 510)
                     .padding(.bottom, 900)
@@ -85,11 +85,11 @@ struct LoginView: View {
                         Text("Bem Vindo(a) \(nome)")
                             .font(.title)
                             .bold()
-                            .padding(.top, 350)
+                            .padding(.top, 250)
                         
                         Text("Profissão: \(Profissao)")
                             .padding(.top, 5)
-                            .padding(.bottom, 200)
+                            .padding(.bottom, 80)
                             Button("Editar Perfil"){
                                 logado.toggle()
                             }
@@ -100,10 +100,10 @@ struct LoginView: View {
                             .border(.blue.opacity(0.2))
                         }
                     }
-                    
-                    Divider()
-                        .frame(width: 300, height: 2)
-                        .overlay(.black)
+//
+//                    Divider()
+//                        .frame(width: 300, height: 2)
+//                        .overlay(.black)
                     
                     
                 }
