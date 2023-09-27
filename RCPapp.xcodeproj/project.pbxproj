@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C3FDD7FA2AC31F0C002A4354 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FDD7F92AC31F0C002A4354 /* HomeView.swift */; };
-		F3CB1E892AC45DEE0067885A /* hahaha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3CB1E882AC45DEE0067885A /* hahaha.mp3 */; };
 		F951FF142AC324B5007039AD /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951FF132AC324B5007039AD /* InfoView.swift */; };
 		F9C69BB02ABDC7CA00A97992 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C69BAF2ABDC7CA00A97992 /* MapView.swift */; };
 		FA38B3F72AC3189F0098769A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38B3F62AC3189F0098769A /* LoginView.swift */; };
+		FC45B3EB2AC45FAA00473FD9 /* hahaha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC45B3EA2AC45FAA00473FD9 /* hahaha.mp3 */; };
 		FC8FEA2A2AB9BAAD00690664 /* RCPappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8FEA292AB9BAAD00690664 /* RCPappApp.swift */; };
 		FC8FEA2C2AB9BAAD00690664 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8FEA2B2AB9BAAD00690664 /* ContentView.swift */; };
 		FC8FEA2E2AB9BAAE00690664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8FEA2D2AB9BAAE00690664 /* Assets.xcassets */; };
@@ -20,10 +20,10 @@
 
 /* Begin PBXFileReference section */
 		C3FDD7F92AC31F0C002A4354 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../HomeView.swift; sourceTree = "<group>"; };
-		F3CB1E882AC45DEE0067885A /* hahaha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hahaha.mp3; path = ../../../../Downloads/hahaha.mp3; sourceTree = "<group>"; };
 		F951FF132AC324B5007039AD /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		F9C69BAF2ABDC7CA00A97992 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FA38B3F62AC3189F0098769A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FC45B3EA2AC45FAA00473FD9 /* hahaha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hahaha.mp3; path = ../../../hahaha.mp3; sourceTree = "<group>"; };
 		FC8FEA262AB9BAAD00690664 /* RCPapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCPapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8FEA292AB9BAAD00690664 /* RCPappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCPappApp.swift; sourceTree = "<group>"; };
 		FC8FEA2B2AB9BAAD00690664 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		FC8FEA282AB9BAAD00690664 /* RCPapp */ = {
 			isa = PBXGroup;
 			children = (
-				F3CB1E882AC45DEE0067885A /* hahaha.mp3 */,
+				FC45B3EA2AC45FAA00473FD9 /* hahaha.mp3 */,
 				C3FDD7F92AC31F0C002A4354 /* HomeView.swift */,
 				FC8FEA292AB9BAAD00690664 /* RCPappApp.swift */,
 				F9C69BAF2ABDC7CA00A97992 /* MapView.swift */,
@@ -141,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8FEA312AB9BAAE00690664 /* Preview Assets.xcassets in Resources */,
-				F3CB1E892AC45DEE0067885A /* hahaha.mp3 in Resources */,
+				FC45B3EB2AC45FAA00473FD9 /* hahaha.mp3 in Resources */,
 				FC8FEA2E2AB9BAAE00690664 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
