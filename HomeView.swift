@@ -9,10 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     var musicList = [
-        Music(name: "Bones", artist: "Imagine Dragons", image: "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13"),
-        Music(name: "do wanna taste it", artist: "Wig Wam", image: "https://static.qobuz.com/images/covers/kb/kc/t8o6zveb8kckb_600.jpg"),
-        Music(name: "annihilation", artist: " Lil Wayne, Metro Boomin, Offset, Swae Lee 2", image: "https://i.scdn.co/image/ab67616d0000b2736ed9aef791159496b286179f"),
-        // Adicione mais músicas conforme necessário
+        Music(name: "Stayin Alive", artist: "Bee Gees", image: "https://i.scdn.co/image/ab67616d0000b273e39f29035ee5c2bf71e9cfb7", file: "hahaha"),
     ]
     
     @State var isPlaying : Bool = false;
@@ -20,7 +17,7 @@ struct HomeView: View {
     @State var rotation = 0.0
     
     
-    @State var currentPlaying : Music =  Music(name: "Bones", artist: "Imagine Dragons", image: "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13")
+    @State var currentPlaying : Music =  Music(name: "Stayin Alive", artist: "Bee Gees", image: "https://i.scdn.co/image/ab67616d0000b273e39f29035ee5c2bf71e9cfb7", file: "hahaha")
     var body: some View {
         VStack{
             ZStack{
@@ -56,6 +53,12 @@ struct HomeView: View {
                         
                     }
                         
+                        Text("\(currentPlaying.name)")
+                            .fontWeight(.semibold)
+                        
+                        Text("\(currentPlaying.artist)")
+                            .fontWeight(.regular)
+                        
                     }else {
                         AsyncImage(url: URL(string: currentPlaying.image)){ image in
                             image
@@ -68,7 +71,7 @@ struct HomeView: View {
                             
                                 .onTapGesture {
                                     isPlaying = true
-                                    playSound(key: "test")
+                                    playSound(key: currentPlaying.file)
                                     
                                 }
                         }
@@ -103,7 +106,7 @@ struct HomeView: View {
                                             currentPlaying = musica
                                             isPlaying = true
                                             isRotating = true
-                                            playSound(key: "test")
+                                            playSound(key: currentPlaying.file)
                                         }
                                         VStack{
                                             Text(musica.name).font(.title2).fontWeight(.semibold)

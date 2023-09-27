@@ -13,6 +13,7 @@ struct Music {
     var name: String
     var artist: String
     var image: String
+    var file : String
 }
 
 var player : AVAudioPlayer!
@@ -20,7 +21,7 @@ var player : AVAudioPlayer!
 func playSound(key: String) {
     
     
-    let path = Bundle.main.path(forResource: "hahaha", ofType:"mp3")!
+    let path = Bundle.main.path(forResource: key, ofType:"mp3")!
     let url = URL(fileURLWithPath: path)
     
     
