@@ -18,10 +18,15 @@ struct MapView: View {
         span: .init(latitudeDelta: 0.2, longitudeDelta: 0.2))
     
     @State var hospitais = [
-    hospital(nomeHosp: "Hospital Vidas", coordinate: CLLocationCoordinate2D(latitude: -23.6755458, longitude: -46.6981828)),
-    hospital(nomeHosp: "Centro Clínico de Interlagos", coordinate: CLLocationCoordinate2D(latitude: -23.6817293, longitude: -46.7000632)),
+    hospital(nomeHosp: "Hospital Vidas", coordinate: CLLocationCoordinate2D(latitude: -23.6750734, longitude: -46.6856383)),
+    hospital(nomeHosp: "Centro Clínico de Interlagos", coordinate: CLLocationCoordinate2D(latitude: -23.6775485, longitude: -46.6820012)),
     hospital(nomeHosp: "Hospital Regional Sul", coordinate: CLLocationCoordinate2D(latitude: -23.6637639, longitude: -46.7248589)),
-    hospital(nomeHosp: "Hospital do Servidor Público Municipal", coordinate: CLLocationCoordinate2D(latitude: -23.6619165, longitude: -46.7223698))
+    hospital(nomeHosp: "Hospital do Servidor Público Municipal", coordinate: CLLocationCoordinate2D(latitude: -23.566786, longitude: -46.639245)),
+    hospital(nomeHosp: "Hospital Municipal Doutor Fernando Mauro Pires da Rocha - Campo Limpo", coordinate: CLLocationCoordinate2D(latitude: -23.6492392, longitude: -46.7492328)),
+    hospital(nomeHosp: "Hospital Municipal M'Boi mirim", coordinate: CLLocationCoordinate2D(latitude: -23.6922669, longitude: -46.7755115)),
+    hospital(nomeHosp: "Hospital Municipal da Vila Santa Catarina,2785 - Vila Santa Catarina", coordinate: CLLocationCoordinate2D(latitude: -46.6536434, longitude: -23.6574987)),
+    hospital(nomeHosp: "Hospital Geral de Pedreira", coordinate: CLLocationCoordinate2D(latitude: -23.6811512, longitude: -46.6764103)),
+    hospital(nomeHosp: "Assistência Médica ao Servidor Público Estadual de S. Paulo", coordinate: CLLocationCoordinate2D(latitude: -23.5963218, longitude: -46.6538787))
     ]
     
     var body: some View {
@@ -33,7 +38,7 @@ struct MapView: View {
              }) {
                  Text("Ligar para \(phoneNumber)")
                      .padding()
-                     .background(Color.red)
+                     .background(Color.blue)
                      .foregroundColor(.white)
                      .cornerRadius(10)
              }
