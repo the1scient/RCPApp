@@ -9,6 +9,9 @@ import SwiftUI
 import AudioToolbox
 
 struct HomeView: View {
+    
+    @StateObject var viewModel = ViewModel()
+    
     var musicList = [
         Music(id: "", name: "Stayin Alive", artist: "Bee Gees", image: "https://i.scdn.co/image/ab67616d0000b273e39f29035ee5c2bf71e9cfb7", file: "hahaha"),
     ]
@@ -27,6 +30,8 @@ struct HomeView: View {
     }
     
     @State var currentPlaying : Music =  Music(id: "", name: "Stayin Alive", artist: "Bee Gees", image: "https://i.scdn.co/image/ab67616d0000b273e39f29035ee5c2bf71e9cfb7", file: "hahaha")
+    
+    
     var body: some View {
         VStack{
             ZStack{
@@ -103,7 +108,7 @@ struct HomeView: View {
                     //                        .frame(height: 10)
                     ScrollView {
                         VStack{
-                            ForEach(musicList, id: \.name){ musica in
+                            ForEach(viewModel.music, id: \.name){ musica in
                                 VStack{
                                     HStack{
                                         AsyncImage(url: URL(string: musica.image)){ image in
