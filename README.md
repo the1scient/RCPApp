@@ -3,7 +3,14 @@
 RCPApp é um aplicativo para iOS que auxilia as pessoas a realizarem a Ressucitação Cardiopulmonar. É um aplicativo sem fins lucrativos, portanto, não apresenta anúncios em sua utilização.
 
 
+## O Aplicativo:
 
+<div style="justify-content: center;">
+<img src="https://i.imgur.com/mL2xPy3.png" width="220" height="400"> 
+<img src="https://i.imgur.com/OXSQW3O.png" width="220" height="400"> 
+<img src="https://i.imgur.com/JnxMa98.png" width="220" height="400"> 
+<img src="https://i.imgur.com/5MFwGqo.png" width="220" height="400"> 
+</div>
 
 ## Tecnologias Utilizadas no Projeto:
 
