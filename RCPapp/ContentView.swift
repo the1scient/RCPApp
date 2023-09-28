@@ -19,28 +19,18 @@ struct Music {
 var player : AVAudioPlayer!
 
 func playSound(key: String) {
-    
-    
+     
     let path = Bundle.main.path(forResource: key, ofType:"mp3")!
     let url = URL(fileURLWithPath: path)
     
-    
     do {
-        
         player = try AVAudioPlayer(contentsOf: url)
         player?.play()
     }
-    
     catch {
-        
         print("Error playing: \(error)")
-        
     }
-    
-    
-    
 }
-
 
 struct ContentView: View {
     
@@ -48,26 +38,16 @@ struct ContentView: View {
         UITabBar.appearance().backgroundColor = UIColor(red: 200, green: 200, blue: 200, alpha: 0.5)
     }
     
-    
-    
-    
     var body: some View {
         
         TabView {
-            
             HomeView()
                 .font(.system(size: 20, design: .rounded))
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("home")
-                    
-                    
-                    
                 }
-            
-            
             InfoView()
-                .font(.title)
                 .tabItem {
                     Image(systemName: "heart.fill")
                     Text("Info")
@@ -84,14 +64,8 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Perfil")
-                    
-                    
-                    
                 }
-            
         } .accentColor(.red.opacity(0.75))
-        
-
     }
 }
 

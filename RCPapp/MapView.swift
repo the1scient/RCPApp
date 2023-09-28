@@ -33,7 +33,7 @@ struct MapView: View {
              }) {
                  Text("Ligar para \(phoneNumber)")
                      .padding()
-                     .background(Color.blue)
+                     .background(Color.red)
                      .foregroundColor(.white)
                      .cornerRadius(10)
              }
