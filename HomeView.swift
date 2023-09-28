@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import AudioToolbox
 
 struct HomeView: View {
     var musicList = [
-        Music(name: "Stayin Alive", artist: "Bee Gees", image: "https://i.scdn.co/image/ab67616d0000b273e39f29035ee5c2bf71e9cfb7", file: "hahaha"),
+        Music(id: "", name: "Stayin Alive", artist: "Bee Gees", image: "https://i.scdn.co/image/ab67616d0000b273e39f29035ee5c2bf71e9cfb7", file: "hahaha"),
     ]
     
     @State var isPlaying : Bool = false;
@@ -17,7 +18,15 @@ struct HomeView: View {
     @State var rotation = 0.0
     
     
-    @State var currentPlaying : Music =  Music(name: "Stayin Alive", artist: "Bee Gees", image: "https://i.scdn.co/image/ab67616d0000b273e39f29035ee5c2bf71e9cfb7", file: "hahaha")
+    func vibrar() {
+        
+        if isPlaying == true {
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        }
+        
+    }
+    
+    @State var currentPlaying : Music =  Music(id: "", name: "Stayin Alive", artist: "Bee Gees", image: "https://i.scdn.co/image/ab67616d0000b273e39f29035ee5c2bf71e9cfb7", file: "hahaha")
     var body: some View {
         VStack{
             ZStack{
@@ -72,6 +81,10 @@ struct HomeView: View {
                                 .onTapGesture {
                                     isPlaying = true
                                     playSound(key: currentPlaying.file)
+                                    vibrar()
+                                    Timer.scheduledTimer(withTimeInterval: 1.66, repeats: true){ _ in
+                                        vibrar()
+                                    }
                                     
                                 }
                         }
@@ -107,6 +120,10 @@ struct HomeView: View {
                                             isPlaying = true
                                             isRotating = true
                                             playSound(key: currentPlaying.file)
+                                            vibrar()
+                                            Timer.scheduledTimer(withTimeInterval: 1.66, repeats: true){ _ in
+                                                vibrar()
+                                            }
                                         }
                                         VStack{
                                             Text(musica.name).font(.title2).fontWeight(.semibold)

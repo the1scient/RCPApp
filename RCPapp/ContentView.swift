@@ -9,13 +9,6 @@ import SwiftUI
 import Foundation
 import AVFoundation
 
-struct Music {
-    var name: String
-    var artist: String
-    var image: String
-    var file : String
-}
-
 var player : AVAudioPlayer!
 
 func playSound(key: String) {
