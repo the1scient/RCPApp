@@ -26,7 +26,14 @@ struct MapView: View {
     hospital(nomeHosp: "Hospital Municipal M'Boi mirim", coordinate: CLLocationCoordinate2D(latitude: -23.6922669, longitude: -46.7755115)),
     hospital(nomeHosp: "Hospital Municipal da Vila Santa Catarina,2785 - Vila Santa Catarina", coordinate: CLLocationCoordinate2D(latitude: -46.6536434, longitude: -23.6574987)),
     hospital(nomeHosp: "Hospital Geral de Pedreira", coordinate: CLLocationCoordinate2D(latitude: -23.6811512, longitude: -46.6764103)),
-    hospital(nomeHosp: "Assistência Médica ao Servidor Público Estadual de S. Paulo", coordinate: CLLocationCoordinate2D(latitude: -23.5963218, longitude: -46.6538787))
+    hospital(nomeHosp: "Assistência Médica ao Servidor Público Estadual de S. Paulo", coordinate: CLLocationCoordinate2D(latitude: -23.5963218, longitude: -46.6538787)),
+    hospital(nomeHosp: "Hospital Israelita Albert Einstein", coordinate: CLLocationCoordinate2D(latitude: -23.5999746, longitude: -46.7152573)),
+    hospital(nomeHosp: "Hospital Municipal Cidade Tiradentes", coordinate: CLLocationCoordinate2D(latitude: -23.5971231, longitude: -46.403632)),
+    hospital(nomeHosp: "Hospital São Luiz de São Caetano", coordinate: CLLocationCoordinate2D(latitude: -23.6289838, longitude: -46.5793968)),
+    hospital(nomeHosp: "Hospital Geral de Pirajussara", coordinate: CLLocationCoordinate2D(latitude: -23.64047, longitude: -46.8098752)),
+    hospital(nomeHosp: "Hospital Regional de Osasco", coordinate: CLLocationCoordinate2D(latitude: -23.5248636, longitude: -46.771857)),
+    hospital(nomeHosp: "Hospital Sancta Maggiore - São Bernardo", coordinate: CLLocationCoordinate2D(latitude: -23.6639853, longitude: -46.5700833)),
+    hospital(nomeHosp: "Hospital SBC", coordinate: CLLocationCoordinate2D(latitude: -23.5376433, longitude: -46.7284836))
     ]
     
     var body: some View {
@@ -75,3 +82,4 @@ struct MapView_Previews: PreviewProvider {
         MapView()
     }
 }
+
