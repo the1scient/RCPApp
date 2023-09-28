@@ -50,6 +50,7 @@ struct LoginView: View {
                             .background(Color.gray.opacity(0.20))
                             .cornerRadius(10)
                             .border(.red.opacity(0.1))
+                            .cornerRadius(10)
                             .padding(.top, 250)
                             .padding(.bottom, 10)
                         TextField ("Profissão", text: $Profissao)
@@ -59,6 +60,7 @@ struct LoginView: View {
                             .background(Color.gray.opacity(0.20))
                             .cornerRadius(10)
                             .border(.red.opacity(0.1))
+                            .cornerRadius(10)
                             .padding(.bottom, 10)
                         if nome != "" && Profissao != ""{
                             Button("Salvar Perfil"){
@@ -69,7 +71,8 @@ struct LoginView: View {
                             .frame(width: 300, height: 50)
                             .background(Color.red.opacity(0.95))
                             .cornerRadius(10)
-                            .border(.blue.opacity(0.2))
+                            .border(.black.opacity(0.2))
+                            .cornerRadius(10)
                             .padding(.top, 50)
                         } else {
                             Button("Salvar Perfil"){
@@ -80,7 +83,8 @@ struct LoginView: View {
                             .frame(width: 300, height: 50)
                             .background(Color.gray.opacity(0.65))
                             .cornerRadius(10)
-                            .border(.blue.opacity(0.2))
+                            .border(.black.opacity(0.2))
+                            .cornerRadius(10)
                             .padding(.top, 50)
                         }
                     } else {
@@ -101,6 +105,7 @@ struct LoginView: View {
                             .background(Color.red.opacity(0.95))
                             .cornerRadius(10)
                             .border(.blue.opacity(0.2))
+                            .cornerRadius(10)
                         }
                     }
 //
