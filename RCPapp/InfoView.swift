@@ -23,8 +23,8 @@ struct InfoView: View {
     ]
     
     var body: some View {
-        ScrollView{
             VStack{
+                ScrollView{
                 Text("Introdução ao RCP ")
                     .bold()
                 Divider()
@@ -77,10 +77,9 @@ struct InfoView: View {
                     .cornerRadius(10)
                     .foregroundColor(.white)
             }
+            }
+            .padding(.top)
             
-            
-            
-        }
     }
     
     struct InfoView_Previews: PreviewProvider {
